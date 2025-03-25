@@ -2,7 +2,7 @@ import '../../language_helper.dart';
 
 extension LanguageHelperEx on String {
   /// Translate the current text wih default parameters.
-  String get tr => LanguageHelper.instance.translate(this);
+  String get lhtr => LanguageHelper.instance.translate(this);
 
   /// Translate with only [params] parammeter
   /// ``` dart
