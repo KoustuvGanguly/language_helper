@@ -322,7 +322,7 @@ void main() async {
     });
 
     test('Test with default language', () {
-      expect('Hello'.lhtr, equals('Hello'));
+      expect('Hello'.trans, equals('Hello'));
 
       expect('You have @number dollars'.trP({'number': '100'}),
           equals('You have 100 dollars'));
@@ -331,7 +331,7 @@ void main() async {
     test('Test with vi language', () {
       languageHelper.change(LanguageCodes.vi);
 
-      expect('Hello'.lhtr, equals('Xin Chào'));
+      expect('Hello'.trans, equals('Xin Chào'));
 
       expect('You have @number dollars'.trP({'number': '100'}),
           equals('Bạn có 100 đô-la'));
@@ -348,7 +348,7 @@ void main() async {
       languageHelper.setUseInitialCodeWhenUnavailable(false);
       languageHelper.change(LanguageCodes.cu);
 
-      expect('Hello'.lhtr, equals('Xin Chào'));
+      expect('Hello'.trans, equals('Xin Chào'));
 
       expect('You have @number dollars'.trP({'number': '100'}),
           equals('Bạn có 100 đô-la'));
@@ -360,7 +360,7 @@ void main() async {
       languageHelper.setUseInitialCodeWhenUnavailable(true);
       languageHelper.change(LanguageCodes.cu);
 
-      expect('Hello'.lhtr, equals('Hello'));
+      expect('Hello'.trans, equals('Hello'));
 
       expect('You have @number dollars'.trP({'number': '100'}),
           equals('You have 100 dollars'));

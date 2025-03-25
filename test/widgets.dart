@@ -14,8 +14,8 @@ class LanguageHelperWidget extends StatelessWidget {
         body: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            LanguageBuilder(builder: (_) => Text('Hello'.lhtr)),
-            Text('Hello'.lhtr),
+            LanguageBuilder(builder: (_) => Text('Hello'.trans)),
+            Text('Hello'.trans),
             LanguageBuilder(
               builder: (_) => Text(
                 'You have @number dollars'.trP({'number': 100}),
@@ -44,8 +44,8 @@ class TrWidget extends StatelessWidget {
         body: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Tr((_) => Text('Hello'.lhtr)),
-            Text('Hello'.lhtr),
+            Tr((_) => Text('Hello'.trans)),
+            Text('Hello'.trans),
             Tr(
               (_) => Text(
                 'You have @number dollars'.trF(params: {'number': 100}),

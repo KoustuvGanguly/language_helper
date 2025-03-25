@@ -50,17 +50,17 @@ class _MyAppState extends State<MyApp> {
     return LanguageBuilder(builder: (_) {
       return Scaffold(
         appBar: AppBar(
-          title: Tr((_) => Text('Hello'.lhtr)),
+          title: Tr((_) => Text('Hello'.trans)),
         ),
         body: Center(
           child: Column(
             children: [
               LanguageBuilder(builder: (context) {
                 return LanguageBuilder(builder: (context) {
-                  return Text('Hello'.lhtr);
+                  return Text('Hello'.trans);
                 });
               }),
-              Text('Hello'.lhtr),
+              Text('Hello'.trans),
               ElevatedButton(
                 onPressed: () {
                   if (LanguageHelper.instance.code == LanguageCodes.vi) {
@@ -71,20 +71,20 @@ class _MyAppState extends State<MyApp> {
                 },
                 child: const Text('Change language'),
               ),
-              Builder(builder: (_) => Text('Hello'.lhtr)),
+              Builder(builder: (_) => Text('Hello'.trans)),
               Dialog(
-                child: Text('Hello'.lhtr),
+                child: Text('Hello'.trans),
               ),
               Text('This is @number dollar'.trP({'number': 0})),
               Text('This is @number dollar'.trP({'number': 1})),
               Text('This is @number dollar'.trP({'number': 100})),
-              Text('This is a contains variable line $mounted'.lhtr),
+              Text('This is a contains variable line $mounted'.trans),
               ElevatedButton(
                 onPressed: () {
                   LanguageHelper.instance
                       .addData(LanguageDataProvider.data(languageDataAdd));
                 },
-                child: Text('This text will be changed when the data added'.lhtr),
+                child: Text('This text will be changed when the data added'.trans),
               ),
               const Divider(),
               ElevatedButton(
@@ -117,13 +117,13 @@ class OtherPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: LanguageBuilder(builder: (context) {
-          return Text('Other Page'.lhtr);
+          return Text('Other Page'.trans);
         }),
       ),
       body: Column(
         children: [
-          Tr((_) => Text('Text will be changed'.lhtr)),
-          Text('Text will be not changed'.lhtr),
+          Tr((_) => Text('Text will be changed'.trans)),
+          Text('Text will be not changed'.trans),
           ElevatedButton(
             onPressed: () {
               if (LanguageHelper.instance.code == LanguageCodes.vi) {
@@ -132,7 +132,7 @@ class OtherPage extends StatelessWidget {
                 LanguageHelper.instance.change(LanguageCodes.vi);
               }
             },
-            child: Tr((_) => Text('Change language'.lhtr)),
+            child: Tr((_) => Text('Change language'.trans)),
           ),
         ],
       ),
