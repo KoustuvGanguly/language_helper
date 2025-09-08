@@ -2,6 +2,7 @@ name: language_helper
 description: Control multiple languages with an efficient generator and a custom GPT-4 translator for easy localization.
 version: 0.11.7
 homepage: https://github.com/lamnhan066/language_helper
+publish_to: none
 topics:
   - localization
   - internationalization
@@ -10,7 +11,7 @@ topics:
   - l10n
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.7.0 <4.0.0"
 
 platforms:
   android:
@@ -26,7 +27,10 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   language_code: ">=0.4.0 <0.6.0"
-  language_helper_generator: ^0.5.3
+  language_helper_generator:
+    git:
+      url: https://github.com/KoustuvGanguly/language_helper_generator.git
+      ref: koustuv/upgrade_dependency
   shared_preferences: ^2.0.0
   http: ^1.0.0
 
