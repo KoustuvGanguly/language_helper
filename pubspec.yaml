@@ -29,8 +29,8 @@ dependencies:
   language_code: ">=0.4.0 <0.6.0"
   language_helper_generator:
     git:
-      url: https://github.com/KoustuvGanguly/language_helper_generator.git
-      ref: koustuv/upgrade_dependency
+      url: https://github.com/KoustuvGanguly/language_helper_generator_custom.git
+      ref: main
   shared_preferences: ^2.0.0
   http: ^1.0.0
 
